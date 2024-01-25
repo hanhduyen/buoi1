@@ -10,9 +10,12 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     
     <style>
+      html{
+        font-family: 'Inter', sans-serif;
+      }
       .p{
          font-family: 'Inter', sans-serif;
       }
@@ -29,10 +32,21 @@
         font-size: x-large;
         color: black;
       }
-      .gc{
-        text-decoration: underline;
-        text-decoration-color: lightcoral;
-        font-weight: bold;
+      .line {
+        text-decoration: solid lightcoral;
+      }
+      .line{
+        content: '';
+        position: relative;
+      }
+
+      .div.line ::after{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 10px;
+        margin-bottom: 20px;
+        background-color: lightcoral;
       }
       .btn-center {
         border: 2px solid lightcoral; 
@@ -52,19 +66,53 @@
       .btn-center:hover #text-btn-center {
         color: white;
       }
-      .cuoibai{
-        border: 1px solid black;
-        border-radius: 50px;
+      .hlink{
+        border: 2px solid lightcoral; 
+        border-radius: 50px; 
+        display: inline-block; 
         padding-left: 20px; 
-        padding-right: 20px;
-        padding-top: 10px; 
-        padding-bottom: 10px;
+        padding-right: 20px; 
+        margin: auto;
       }
+      .hlink:hover{
+      background-color: lightcoral;
+      cursor: pointer;
+      }
+      .hlink:hover #text-hlink {
+      color: white;
+      }
+      #myDIV {
+        height:300px;
+        background-color:#FFFFFF;
+      }
+
+      #myDIV p {
+        padding: 10px;
+        margin: 20px;  
+        margin-bottom: 10px;
+        margin-top: 30px;
+        display:inline-block;
+      }
+
+      #myDIV span {
+        border: 1px solid gray;
+        border-radius: 50px;
+        padding: 15px;  
+        color: black;
+      }
+      .header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: white;
+      }
+      
       
     </style>
   </head>
   <body>
-    <div class="header" style="display: flex;margin-top: 50px;">
+    <div class="header" style="display: flex;">
       <div style="width: 50%; display: flex;margin-left: 30px;">
         <i class="fa-solid fa-j fa-3x";></i>
         <p style="font-size: 20px; margin-left: 20px;">JASON STROFF</p>
@@ -83,9 +131,9 @@
           alt="anh"
         />
       </div>
-      <div>
+      <div style="padding-top: 120px;">
         <p style="font-size: small;">HI THERE</p>
-        <p style="font-size: 33px">
+        <p style="font-size: 33px;font-weight: bold;">
           I'm Jason Stroff UI/UX DESIGNER + DEVELOPER based in Florida.
         </p> 
         <div id="ss" style="display: flex;color:lightcoral;">
@@ -98,7 +146,7 @@
     </div>
     <div style="margin-left: 30px;">
       
-      <p class="gc" style="font-size:30px;">About me</p>
+      <p class="line" style="font-size:30px;">About me</p>
       <p style="font-size:25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit tortor, ultricies in quam ut, luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum tellus. Integer bibendum eget dolor nec venenatis. Aliquam erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.
 
       </p>
@@ -109,28 +157,91 @@
     </div>
     </div>
     <div>
-      <div class="gc" style="display: flex;margin-top: 100px;">
+      <div class="line" style="display: flex;margin-top: 100px;">
           <div style="margin-left: 40px;">CORE SKILL</div>
           <div style="margin-left:43%;">OTHER SKILL</div>
       </div>
-      <div style="display: flex;margin-left: 20px;margin-top: 20px;">
-        <p class="cuoibai" style="margin-left: 20px;">JavaScript</p>
-        <p class="cuoibai" style="margin-left: 20px;">Node.js</p>
-        <p class="cuoibai" style="margin-left: 20px;">Express.js</p>
-        <p class="cuoibai" style="margin-left: 20px;">MongoDB</p>
-        <p class="cuoibai" style="margin-left: 160px;">Storyblok</p>
-        <p class="cuoibai" style="margin-left: 20px;">PWAs</p>
-        <p class="cuoibai" style="margin-left: 20px;">Responsive Web Design</p>
-      </div>
-      <div style="display: flex;margin-left: 20px;">
-        <p class="cuoibai" style="margin-left: 20px;">Vue.js</p>
-        <p class="cuoibai" style="margin-left: 20px;">React</p>
-        <p class="cuoibai" style="margin-left: 20px;">Sequelize</p>
-        <p class="cuoibai" style="margin-left: 20px;">Github</p>
-        <p class="cuoibai" style="margin-left: 20px;">HTML</p>
-        <p class="cuoibai" style="margin-left: 120px;">React</p>
-        <p class="cuoibai" style="margin-left: 20px;">Vuetify</p>
-      </div>
+        <div id="bdiv">
+          <div id="myDIV">
+            <p>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>MongoDB</span>
+            </p>
+            <p>
+              <span style="margin-left: 140px;">Storyblok</span>
+              <span>PWAs</span>
+              <span>Responsive Web Design</span>
+            </p>
+          </div>
+          <div id="myDIV" style="margin-top:-245px;">
+            <p>
+              <span>Vue.js</span>
+              <span>React</span>
+              <span>Sequelize</span>
+              <span>Github</span>
+              <span>HTML</span>
+            </p>
+            <p>
+              <span style="margin-left: 140px;">React</span>
+              <span>TVuetify</span>
+            </p>
+            </div>            
+        </div>
+        <p class="line" style="margin-left: 40px;margin-top: -100px;">WORK EXPERIENCE</p>
+        <div style="display: flex;margin-left: 40px;">
+            <div >
+              <p>2019 - Present</p>
+              <p style="font-size: 30px;">Matrix Media Inc</p>
+              <p style="font-size: 20px;">Full Stack developer</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>
+            </div>
+            <div>
+              <p>2018 - 2019</p>
+              <p style="font-size: 30px;">Lexind</p>
+              <p style="font-size: 20px;">Senior app developer</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+              </ul>
+            </div>
+        </div>
+        <p class="gc" style="margin-left: 40px;margin-top: 50px;">LATEST WORKS</p>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Tripy mobile app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-1.jpg" alt="a"></div>
+        </div>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Hello mobile app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-2.jpg" alt="a"></div>
+        </div>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Cute cookies app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-3.jpg" alt="a"></div>
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: column;align-items: center; justify-content: center; background-color: black;margin-top: 100px;">
+      <p style="font-size: 15px;color: grey;margin-top: 100px;" >STAY IN TOUCH</p>
+      <p style="font-size: 50px;color: white;">Ready to talk? </p>
+      <p style="color: white;margin-top: -40px;margin-bottom: 50px;">Fell free to contact us</p>
+      <a style="color: lightcoral;" href=" ">LETS TALK</a>
+      <p style="color: grey;margin-bottom: 100px;margin-top: 100px;">© 2022 All rights reserved. Free minimal bootstrap template by Designstub.</p>
     </div>
   </body>
 </html>
