@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box{
+          margin-top: 10px;
+          transition-delay:3s;
+          transition-timing-function: ease-in;
+          transition-duration: 2s;
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          background-color: violet;
+          position: relative;
+      }
+      .box:hover {
+          transform: scale(2);
+      }
+      .box1{
+          margin-top: -100px;
+          margin-left:10px
+          transition-timing-function: ease-in-out;
+          transition-duration: 2s;
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          background-color: aqua;
+          position: absolute;
+      }
+      .box1:hover{
+          transform: translateX(500px);
+          background-color: lightpink;
+      }
+      .image{
+        position: relative;
+      }
+      .container:hover .image{
+        filter: brightness(50%);
+        transform: translateX(10px) ;
+      }
+      .text{
+        color: rgb(5, 9, 12);
+        position: absolute;
+        margin-top: -100px;
+      }
+      .container:hover .text{
+        color: white;
+        transform: translate(10px,-100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box"></div>
+      <div class="box1"></div>
+    </div>
+    <div class="container">
+        <img class="image" src="https://i.pinimg.com/564x/50/2d/81/502d81b549d4fe64b592c091ab4e46f2.jpg" alt="">
+        <p class="text">hello abhcbhsUH</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.html{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.first{
+    font-size: small;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.first i{
+    margin-top: 13px;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.image-mac{
+    margin-top: -50px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+.buy a{
+    text-decoration: none;
+    border: 2px solid blue; 
+    background-color: blue;
+    border-radius: 50px; 
+    margin-left: 45%;
+    margin-right: 50%;
+    padding: 10px;
+}
+.buy{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

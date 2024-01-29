@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bai2</title>
+    <script
+      src="https://kit.fontawesome.com/cf444e3ace.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    
+    <style>
+      html{
+        font-family: 'Inter', sans-serif;
+      }
+      .p{
+         font-family: 'Inter', sans-serif;
+      }
+      .flex-container {
+        display: flex;
+      }
+      .flex-container > div {
+        background-color: white;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+      }
+      .text-large{
+        font-size: x-large;
+        color: black;
+      }
+      .line {
+        text-decoration: solid lightcoral;
+      }
+      .line{
+        content: "";
+        position: relative;
+      }
+
+      .div.line ::after{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 10px;
+        margin-bottom: 20px;
+        background-color: lightcoral;
+      }
+      .btn-center {
+        border: 2px solid lightcoral; 
+        border-radius: 50px; 
+        display: inline-block; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+        margin: auto;
+      }
+      .btn-center:hover {
+        background-color: lightcoral;
+        cursor: pointer;
+      }
+      .btn-center #text-btn-center {
+        color: lightcoral;
+      }
+      .btn-center:hover #text-btn-center {
+        color: white;
+      }
+      .hlink{
+        border: 2px solid lightcoral; 
+        border-radius: 50px; 
+        display: inline-block; 
+        padding-left: 20px; 
+        padding-right: 20px; 
+        margin: auto;
+      }
+      .hlink:hover{
+      background-color: lightcoral;
+      cursor: pointer;
+      }
+      .hlink:hover #text-hlink {
+      color: white;
+      }
+      #myDIV {
+        height:300px;
+        background-color:#FFFFFF;
+      }
+
+      #myDIV p {
+        padding: 10px;
+        margin: 20px;  
+        margin-bottom: 10px;
+        margin-top: 30px;
+        display:inline-block;
+      }
+
+      #myDIV span {
+        border: 1px solid gray;
+        border-radius: 50px;
+        padding: 15px;  
+        color: black;
+      }
+      .header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: white;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="header" style="display: flex;">
+      <div style="width: 50%; display: flex;margin-left: 30px;">
+        <i class="fa-solid fa-j fa-3x";></i>
+        <p style="font-size: 20px; margin-left: 20px;">JASON STROFF</p>
+      </div>
+      <div style="width: 50%; text-align: right;color:lightcoral;margin-top: 50px;margin-right: 50px;">
+        <i class="fa-brands fa-github fa-2x"></i>
+        <i class="fa-brands fa-github fa-2x"></i>
+        <i class="fa-brands fa-github fa-2x"></i>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div>
+        <img
+          style="width: 450px"
+          src="https://www.designstub.com/demos/defolio/assets/images/profile-image.jpg"
+          alt="anh"
+        />
+      </div>
+      <div style="padding-top: 120px;">
+        <p style="font-size: small;">HI THERE</p>
+        <p style="font-size: 33px;font-weight: bold;">
+          I'm Jason Stroff UI/UX DESIGNER + DEVELOPER based in Florida.
+        </p> 
+        <div id="ss" style="display: flex;color:lightcoral;">
+          <div><p><b>6+ </b></p><p class="text-large" >Experience</p></div>
+          <div style="margin-left: 100px;"><p><b>89</b> </p><p style="font-size: x-large;" class="text-large">Projects</p></div>
+          <div style="margin-left: 100px;"><p><b>52</b></p><p class="text-large">Happy Clients</p></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 30px;">
+      
+      <p class="line" style="font-size:30px;">About me</p>
+      <p style="font-size:25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit tortor, ultricies in quam ut, luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum tellus. Integer bibendum eget dolor nec venenatis. Aliquam erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.
+
+      </p>
+    </div>
+    <div style="display: flex;">
+      <div class="btn-center">
+      <a id="text-btn-center" href="#" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px;">DOWNLOAD RESUME</a>
+    </div>
+    </div>
+    <div>
+      <div class="line" style="display: flex;margin-top: 100px;">
+          <div style="margin-left: 40px;">CORE SKILL</div>
+          <div style="margin-left:43%;">OTHER SKILL</div>
+      </div>
+        <div id="bdiv">
+          <div id="myDIV">
+            <p>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>MongoDB</span>
+            </p>
+            <p>
+              <span style="margin-left: 140px;">Storyblok</span>
+              <span>PWAs</span>
+              <span>Responsive Web Design</span>
+            </p>
+          </div>
+          <div id="myDIV" style="margin-top:-245px;">
+            <p>
+              <span>Vue.js</span>
+              <span>React</span>
+              <span>Sequelize</span>
+              <span>Github</span>
+              <span>HTML</span>
+            </p>
+            <p>
+              <span style="margin-left: 140px;">React</span>
+              <span>TVuetify</span>
+            </p>
+            </div>            
+        </div>
+        <p class="line" style="margin-left: 40px;margin-top: -100px;">WORK EXPERIENCE</p>
+        <div style="display: flex;margin-left: 40px;">
+            <div >
+              <p>2019 - Present</p>
+              <p style="font-size: 30px;">Matrix Media Inc</p>
+              <p style="font-size: 20px;">Full Stack developer</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+              </ul>
+            </div>
+            <div>
+              <p>2018 - 2019</p>
+              <p style="font-size: 30px;">Lexind</p>
+              <p style="font-size: 20px;">Senior app developer</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+              </ul>
+            </div>
+        </div>
+        <p class="gc" style="margin-left: 40px;margin-top: 50px;">LATEST WORKS</p>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Tripy mobile app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-1.jpg" alt="a"></div>
+        </div>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Hello mobile app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-2.jpg" alt="a"></div>
+        </div>
+        <div class="flex-container" style="background-color: whitesmoke;">
+          <div><p style="font-weight: bold;">Cute cookies app</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+            <a class="hlink" style="display: block; text-decoration: none; padding-top: 10px; padding-bottom: 10px; color: lightcoral;" href="https://www.designstub.com/demos/defolio/works-setails.html">DETAILS </a>
+          </div>
+            <div><img style="width: 400px;" src="https://www.designstub.com/demos/defolio/assets/images/work-3.jpg" alt="a"></div>
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: column;align-items: center; justify-content: center; background-color: black;margin-top: 100px;">
+      <p style="font-size: 15px;color: grey;margin-top: 100px;" >STAY IN TOUCH</p>
+      <p style="font-size: 50px;color: white;">Ready to talk? </p>
+      <p style="color: white;margin-top: -40px;margin-bottom: 50px;">Fell free to contact us</p>
+      <a style="color: lightcoral;" href=" ">LETS TALK</a>
+      <p style="color: grey;margin-bottom: 100px;margin-top: 100px;">© 2022 All rights reserved. Free minimal bootstrap template by Designstub.</p>
+    </div>
+  </body>
+</html>
