@@ -1,0 +1,75 @@
+.firstleft {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+ 
+    gap: 33px;
+  }
+  .first {
+    background-color: rgb(236, 180, 236);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .second{
+    background-color: rgb(188, 234, 188) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .third{
+    background-color: rgb(237, 145, 137) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .secondright{
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+  }
+  .second i{
+    margin-top: 10px;
+  }
+  .button{
+    text-decoration: none;
+    border: 3px solid black;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+  }
+  .button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+ 
+  .firstright{
+  
+    display: flex;
+    flex-direction: row;
+    gap:33px;
+    margin-top: 33px;
+  }
+  @media screen and (max-width: 1024px){
+    .first{
+        display: none;
+    }
+}
+ @media screen and (min-width: 1024px) and (max-width:1020004px)  {
+    .second{
+        display: none;
+    }
+}
+@media screen and (min-width: 1px) and (max-width:574px)  {
+    .second{
+        display: none;
+    }
+}
+@media screen and (min-width: 574px) {
+    .third{
+        display: none;
+    }
+}

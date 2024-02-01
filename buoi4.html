@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buoi4</title>
+    <style>
+      html,
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .wrapper {
+        padding: 50px 50px;
+        max-width: 1200px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container {
+        width: 45%;
+        margin: 20px;
+        height: 300px;
+        border: 3px solid #eee;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .child {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      .bg-one div {
+        position: relative;
+      }
+      .bg-one {
+        background-image: url(https://i.pinimg.com/736x/40/b3/20/40b3209e11cc9fc5dfbf93a6cd8d0e9c.jpg);
+      }
+      .bg-two {
+        background-image: url(https://i.pinimg.com/564x/4d/b4/11/4db411739e248003e97027e6bf0398b5.jpg);
+      }
+      span {
+        display: none;
+        font-size: 55px;
+        font-family: sans-serif;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 50px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .container:hover .child,
+      .container:focus .child {
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: translate(1.2);
+      }
+      .container:hover .child:before,
+      .container:focus .child:before {
+        display: block;
+      }
+      .container:hover span,
+      .container:focus span {
+        display: block;
+      }
+      .child:before {
+        content: "";
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(52, 73, 94, 0.75);
+      }
+      .container p {
+        position: relative;
+        color: violet;
+        margin-top: 30px;
+        margin-left: -300px;
+      }
+      @media screen and (max-width: 960px) {
+        .container {
+          width: 100%;
+          margin: 20px 0;
+        }
+        .wrapper {
+          padding: 20px;
+        }
+      }
+      .sarah1 {
+        transition-duration: 9s;
+      }
+      .sarah1:hover {
+        transform: translateX(50px);
+      }
+      .text {
+        transition-timing-function: cubic-bezier();
+      }
+      .text:hover {
+        transform: translate(100px);
+      }
+      @keyframes move {
+        from {
+          left: -1000px;
+        }
+        to {
+          left: 30px;
+        }
+      }
+      @keyframes mymove{
+        from{
+          left: 300px;
+        }
+        to{
+          left: 30px
+        }
+      }
+      @keyframes dow{
+        from{
+          top :100px;
+        }
+        to{
+          top :140px;
+        }
+      }
+      .bg-two:hover.child{
+        animation: dow 1s infinite;
+      }
+      .sarah1:hover{
+        animation: up 1s infinite;
+      }
+      @keyframes up{
+        from{
+          bottom: 100px;
+        }
+        to{
+          bottom:70px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="child bg-one">
+          <span
+            class="text"
+            style="
+              font-size: x-small;
+              color: deeppink;
+              margin-left: -100px;
+              margin-top: 50px;
+              animation: mymove 1s infinite;
+            "
+            >SARAH LIKES TO WATCHS CLOUDS. SHE'S QUITES DEPRESSED.</span
+          >
+          <span>
+            <div
+              class="sarah1"
+              style="
+                height: 3px;
+                width: 350px;
+                background-color: white;
+                margin-top: -100px;
+                margin-left: 30px;
+                animation: move 1s infinite;
+                animation-fill-mode: backwards;
+              "
+            ></div
+          ></span>
+          <p>FREE <b>SARAH</b></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="child bg-two">
+          <span style="margin-top: 50px; color: deeppink;animation: dow 1s infinite;"> NOW</span>
+          <p style="margin-top:30px;">DREAMY <b>HONEY</b></p>
+          <span
+            ><div
+              class="sarah1"
+              style="
+                height: 7px;
+                width: 500px;
+                background-color: rgb(129, 31, 31);
+                margin-top: 120px;
+                margin-left: 30px;
+                
+              "
+            ></div
+          ></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
