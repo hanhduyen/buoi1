@@ -3,125 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>buoi4</title>
-    <style>
-      html,
-      body {
-        margin: 0px;
-        padding: 0px;
-      }
-      .wrapper {
-        padding: 50px 50px;
-        max-width: 1200px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .container {
-        width: 45%;
-        margin: 20px;
-        height: 300px;
-        border: 3px solid #eee;
-        overflow: hidden;
-        position: relative;
-        float: left;
-        display: inline-block;
-        cursor: pointer;
-      }
-      .child {
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
-      }
-      .bg-one div{
-        position: relative;
-      }
-      .bg-one {
-        background-image: url(https://i.pinimg.com/736x/40/b3/20/40b3209e11cc9fc5dfbf93a6cd8d0e9c.jpg);
-      }
-      .bg-two {
-        background-image: url(https://i.pinimg.com/564x/4d/b4/11/4db411739e248003e97027e6bf0398b5.jpg);
-      }
-      span {
-        display: none;
-        font-size: 55px;
-        font-family: sans-serif;
-        text-align: center;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: 50px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .container:hover .child,
-      .container:focus .child {
-        -ms-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: translate(1.2);
-      }
-      .container:hover .child:before,
-      .container:focus .child:before {
-        display: block;
-      }
-      .container:hover span,
-      .container:focus span {
-        display: block;
-      }
-      .child:before {
-        content: "";
-        display: none;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(52, 73, 94, 0.75);
-      }
-      .container p{
-        position: relative;
-        color: violet;
-        margin-top: 30px;
-        margin-left: -300px;
-      }
-      @media screen and (max-width: 960px) {
-        .container {
-          width: 100%;
-          margin: 20px 0;
-        }
-        .wrapper {
-          padding: 20px;
-        }
-      }
-    </style>
+    <title>b5</title>
+    <link rel="stylesheet" href="bt.css" />
+    <script
+      src="https://kit.fontawesome.com/cf444e3ace.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/cf444e3ace.js"
+      crossorigin="anonymous"
+    ></script>
+    
   </head>
-
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="child bg-one">
-          <span style="font-size: x-small;color: deeppink;margin-left: -100px;margin-top: 50px;">SARAH LIKES TO WATCHS CLOUDS. SHE'S QUITES DEPRESSED.</span>
-          <span><div style="height: 3px;width: 350px;background-color: white;margin-top: -100px;margin-left: 30px;" ></div></span>
-          <p>FREE <b>SARAH</b></p>
-        </div>
+  
+    <div class="first">
+      <div class="firstleft">
+        <i style="margin-top: 10px;" class="fa-brands fa-gitlab"></i>
+        <p>why gitlab</p>
+        <p>platform</p>
+        <p>solutions</p>
+        <p>pricing</p>
+        <p>resources</p>
+        <p>company</p>
+        <p>contact us</p>
       </div>
-      <div class="container">
-        <div class="child bg-two">
-          <span style="margin-top: 200px;"> NOW</span>
-          <p>DREAMY HONEY</p>
-        </div>
-
+      <div class="firstright">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a class="button">get free trial</a>
+        <a style="text-decoration: none;color: whitesmoke;" href="https://gitlab.com/users/sign_in">sign in</a>
       </div>
+    </div>
+    <div class="second">
+      <div>
+        <i style="margin-top: 10px;" class="fa-brands fa-gitlab"></i>
+      </div>
+      <div class="secondright">
+        <a class="button">get free trial</a>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="third">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i style="margin-top: 10px;" class="fa-brands fa-gitlab"></i>
+      <i class="fa-solid fa-bars"></i>
     </div>
   </body>
 </html>
