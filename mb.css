@@ -31,9 +31,10 @@
     text-decoration: none;
     display: block;
   }
-  .d
+  
   .dropdown:hover .dropdown-content {
     display: block;
+    overflow-x: hidden;
 }
 .title{
     display: flex;
@@ -63,6 +64,136 @@
     flex-direction: column;
     justify-content: space-evenly;
     
+}
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+}
+.content-container {
+    max-width: 60vw;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    
+    .preview-containers {
+        width: 440vw;
+        height: 60vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-x: auto;
+
+        .preview-container {
+            width: 60vw;
+            min-width: 60vw;
+            height: 100%;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            margin-right: 70px;
+            border-radius: 30px;
+            display: inline-block;
+
+            .img-preview {
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                object-fit: cover;
+            }            
+        }
+    }
+
+    .preview-containers::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+      
+
+    .btn-containers {
+        margin-top: 20px;
+        width: 250px;
+        height: 56px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+
+        .switch-btns-container {
+            background-color: lightgray;
+            border-radius: 40px;
+            width: 168px;
+            height: 100%;
+            justify-content: center;
+            position: relative;
+            margin-right: 20px;
+
+            .switch-btns-wrapper {
+                width: 100%;
+                height: 8px;
+                margin: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                display: flex;
+                justify-content: space-evenly;
+
+                .action-btn {
+                    width: 10px;
+                    height: 100%;
+                    background-color: gray;
+                    border-radius: 32px;
+
+                    .progress-inside {
+                        width: 10px;
+                        height: 100%;
+                        background-color: black;
+                        border-radius: 32px;
+                    }
+                }
+
+                .normal-btn {
+                    width: 8px;
+                    border-radius: 100%;
+                }
+
+                .playing-btn {
+                    width: 48px;
+                    
+                }
+            }
+        }
+
+        .play-btn-container {
+            width: 56px;
+            height: 100%;
+            background-color: lightgray;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            .play-img-container {
+                width: 20px;
+                height: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.extend-max-width {
+    min-width: 90%;
+    -webkit-transition: min-width 1s ease-in-out;
+    -moz-transition: min-width 1s ease-in-out;
+    -o-transition: min-width 1s ease-in-out;
+    transition: min-width 1s ease-in-out;
 }
 .highlights{
     display: flex;
@@ -121,9 +252,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 155px;
-    margin-left: 130px;
-    margin-right: 130px;
+    gap: 135px;
+    margin-right: 270px;
 }
 .secondtext{
     display: flex;
@@ -215,4 +345,20 @@ li{
 }
 .end b{
     color: black;
+}
+.end a{
+    text-decoration: none;
+    color: grey;
+
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    gap: 87px;
+    margin-left: 10px;
+}
+.end1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

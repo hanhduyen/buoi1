@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="first">
@@ -399,6 +400,18 @@
       <i class="fa-solid fa-magnifying-glass"></i>
       <i class="fa-solid fa-bag-shopping"></i>
     </div>
+    <div class="header" style="display: flex;">
+      <div style="width: 50%; display: flex;margin-left: 30px;font-size: 33px;">
+        <b>MacBook Pro</b>
+      </div>
+      <div style="width: 50%; text-align: right;color:black;margin-top: px;margin-right: -110px;display: flex;flex-direction: row;gap: 20px;">
+        <p style="color: grey;"> Overview</p>
+        <p>Tech Specs</p>
+        <p>Compare</p>
+        <p>New to Mac</p>
+        <a style="text-decoration: none;margin-top: 17px;" href="">Buy</a>
+      </div>
+    </div>
     <div class="title">
       <b>
         <h1 style="font-size: 34px; margin-left: 40px">MacBook Pro</h1>
@@ -423,7 +436,47 @@
       <b style="margin-left: 37%;font-size: 17px;margin-top: 15px;">From $1599 or $133.25/mo. for 12 mo.*</b>
     </div>
     <div class="highlights" style="margin-top: 203px;">
-      <div><h2 style="font-size: 77px;">Get the highlights.</h2></div>
+      <div><h2 style="font-size: 77px;">Get the highlights.</h2>
+      <div class="content-container">
+          <div class="preview-containers" id="preview-containers-id">
+              <div class="first-preview-container preview-container">
+                  <img src="p1.png" alt="" class="img-preview first-img-preview">
+              </div>
+              <div class="second-preview-container preview-container" id="second-preview-container-id">
+                  <img src="/p2.png" alt="" class="img-preview">
+              </div>
+              <div class="first-preview-container preview-container">
+                  <img src="/p2.png" alt="" class="img-preview first-img-preview" id="third-preview-container-id">
+              </div>
+              <div class="first-preview-container preview-container">
+                  <img src="/p4.png" alt="" class="img-preview first-img-preview" id="third-preview-container-id">
+              </div>
+          </div>
+          <div class="btn-containers">
+              <div class="switch-btns-container">
+                  <div class="switch-btns-wrapper">
+                      <div class="first-btn action-btn playing-btn">
+                          <div class="progress-inside" id="progress-preview-id"></div>
+                      </div>
+                      <div class="second-btn action-btn normal-btn">
+                          <!-- <div class="progress-inside"></div> -->
+                      </div>
+                      <div class="third-btn action-btn normal-btn">
+                          <!-- <div class="progress-inside"></div> -->
+                      </div>
+                      <div class="fourth-btn action-btn normal-btn">
+                          <!-- <div class="progress-inside"></div> -->
+                      </div>
+                  </div>
+              </div>
+              <div class="play-btn-container">
+                  <div class="play-img-container" onclick="changePlayButton()">
+                      <img src="play-button.png" alt="" id="play-img">
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
       <div class="hlright">
         <a href="">Watch the film</a>
         <a href=""><i class="fa-solid fa-circle-chevron-right"></i></a>
@@ -535,7 +588,7 @@
           margin-bottom: 30px;
         "
       ></div>
-      <div class="text" style="color: grey; font-size: 23px">
+      <div class="text" style="color: grey; font-size: 23px;margin-left: 210px;">
         <p>
           Behold an entirely new class of GPU architecture. And the
           <b style="color: white"> biggest breakthrough in graphics yet </b> for
@@ -553,23 +606,23 @@
           >.
         </p>
       </div>
-      <div style="color: grey; font-size: 23px">
-        <p style="margin-left: 130px; margin-right: 700px">
-          Up to
-          <b style="color: white">2.5x faster rendering</b>
-          than 16‑inch MacBook Pro with M1 Max3 CPU
-        </p>
+      <div style="color: grey; font-size: 23px;margin-left: 83px;">
+        <div style="margin-left: 130px; margin-right: 700px">
+          <p style="margin-bottom: -2px;">Up to</p>
+          <b style="color: white;font-size: 55px;">2.5x faster rendering</b>
+          <p style="margin-top: -2px;">than 16‑inch MacBook Pro with M1 Max3 </p>
+        </div>
       </div>
       <div>
-        <h4 style="color: white; font-size: 77px; margin-left: 230px">
+        <h4 style="color: white; font-size: 77px; margin-left: 210px;margin-right: 270px;">
           Hardware-accelerated ray tracing.
         </h4>
         <p
           style="
             color: grey;
             font-size: 23px;
-            margin-left: 230px;
-            margin-right: 70px;
+            margin-left: 210px;
+            margin-right: 270px;
           "
         >
           For the first time, MacBook Pro features hardware-accelerated ray
@@ -584,9 +637,9 @@
         <img
           style="
             height: 700px;
-            width: 1000px;
+            width: 900px;
             margin-top: 30px;
-            margin-left: 190px;
+            margin-left: 150px;
           "
           src="https://www.apple.com/v/macbook-pro/aj/images/overview/themes/performance/mbp_16_screen_graphics_endframe__fb6jcc3o1aye_large_2x.jpg"
           alt=""
@@ -778,9 +831,9 @@
         </div>
       </div>
     </div>   
-    <div style="overflow: hidden;">
+    <b style="overflow: hidden;">
       <h4 style="margin-left: 230px;font-size: 77px; margin-right: 330px">All the right connections.</h4>
-      <p style="margin-left: 230px;color: grey;margin-right: 390px;">MacBook Pro packs <span style="color: black;"> powerful array of ports </span>  for connecting high-speed peripherals, driving high-resolution displays, or directly offloading SDXC cards. And it supports both Wi-Fi 6E and Bluetooth 5.3.</p>
+      <b><p style="margin-left: 230px;color: grey;margin-right: 390px;">MacBook Pro packs <span style="color: black;"> powerful array of ports </span>  for connecting high-speed peripherals, driving high-resolution displays, or directly offloading SDXC cards. And it supports both Wi-Fi 6E and Bluetooth 5.3.</p></b>
       <img style="height: 130px;width: 1300px;margin-left: 500px;overflow: hidden;" src="https://www.apple.com/v/macbook-pro/aj/images/overview/themes/connectivity/connections_hw_1__evl8wsn6sd4y_large_2x.jpg" alt="">
       <p></p>
       <img style="height: 130px;width: 1300px;margin-left: -470px;" src="https://www.apple.com/v/macbook-pro/aj/images/overview/themes/connectivity/connections_hw_2__ca4s4y4fbh8i_large_2x.jpg" alt="">
@@ -996,8 +1049,8 @@
             <i style="color: black;margin-top: 13px;" class="fa-brands fa-apple"></i>
             <p style="margin-left:11px ;"> > Mac > MacBook Pro </p>
           </div>
-          <div class="end" style="display:flex;flex-direction: row;gap: 30px;">
-            <div>
+          <div class="end">
+            <div class="end1">
               <b>Shop and Learn</b>
               <a href="">Store</a>
               <a href="">Mac</a>
@@ -1016,7 +1069,7 @@
               <a href="">Apple Pay</a>
               <a href="">Apple Cash</a>
             </div>
-            <div>
+            <div class="end1">
               <b>Account</b>
               <a href="">Manage Your Apple ID</a>
               <a href="">Apple Store Account</a>
@@ -1032,14 +1085,54 @@
               <a href="">Apple Books</a>
               <a href="">App Store</a>
             </div>
-            <div>
+            <div class="end1">
               <b>Apple Store</b>
               <a href="">Find a Store</a>
               <a href="">Genius Bar</a>
               <a href="">Today at Apple</a>
+              <a href="">Apple Camp</a>
+              <a href="">Apple Store App</a>
+              <a href="">Certified Refurbished</a>
+              <a href="">Apple Trade In</a>
+              <a href="">Financing</a>
+              <a href="">Carrier Deals at Apple</a>
+              <a href="">Order Status</a>
+              <a href="">Shopping Help</a>
             </div>
-             
-          
+            <div class="end1">
+              <b>For Business</b>
+              <a href="">Apple and Business</a>
+              <a href="">Shop for Business</a>
+              <b>For Education</b>
+              <a href="">Apple and Education</a>
+              <a href="">Shop for K-12</a>
+              <a href="">Shop for College</a>
+              <b>For Healthcare</b>
+              <a href="">Apple in Healthcare</a>
+              <a href="">Health on Apple Watch</a>
+              <a href="">Health Records on iPhone</a>
+              <b>For Government</b>
+              <a href="">Shop for Government</a>
+              <a href="">Shop for Veterans and Military</a>
+            </div>
+            <div class="end1">
+              <b>Apple Values</b>
+              <a href="">Accessibility</a>
+              <a href="">Education </a>
+              <a href="">Environment</a>
+              <a href="">Inclusion and Diversity</a>
+              <a href="">Privacy</a>
+              <a href="">Racial Equity and Justice</a>
+              <a href="">Supplier Responsibility</a>
+              <b>About Apple</b>
+              <a href="">Newsroom</a>
+              <a href="">Apple Leadership</a>
+              <a href="">Career Opportunities</a>
+              <a href="">Investors</a>
+              <a href="">Ethics & Compliance</a>
+              <a href="">Events</a>
+              <a href="">Contact Apple</a>
+            </div>
         </div>
     </div>
   </body>
